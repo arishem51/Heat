@@ -1,10 +1,10 @@
 import { TEXT } from "../constant/index.js";
 
-function createTextElement() {
+function createTextElement(text) {
   return {
     type: TEXT,
     props: {
-      // nodeValue: text,
+      nodeValue: text,
       children: [],
     },
   };
@@ -25,6 +25,6 @@ export function createChildren(children) {
     if (typeof child === "object") {
       return child;
     }
-    return createTextElement();
+    return createTextElement(child);
   });
 }

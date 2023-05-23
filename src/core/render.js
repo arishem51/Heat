@@ -2,7 +2,6 @@ import { TEXT } from "../constant/index.js";
 import { addPropToNode } from "../helper/index.js";
 
 export default function render(element, container) {
-  console.log({ element });
   const dom =
     element.type === TEXT
       ? document.createTextNode("")
